@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("1 Construindo Imagem Docker v}") {
             steps {
-                echo "1 Construindo Imagem Docker version..."
+                echo "1 Construindo Imagem Docker version ${env.BUILD_ID}"
                 script {
                     dockerapp = docker.build("nunonaweb/plataform_engineering:${env.BUILD_ID}")
 
