@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        version = '1.0.0'
+    }
+
     stages {
-        stage('1- Construindo Imagem Docker v$version') {
+        stage("1- Construindo Imagem Docker v${version}") {
             steps {
-                echo '1- Construindo Imagem Docker v$version...'
+                echo "1- Construindo Imagem Docker v${version}..."
             }
         }
         stage('2- Enviando imagem para o Repositório') {
