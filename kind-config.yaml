@@ -6,3 +6,6 @@ nodes:
       - containerPort: 30008
         hostPort: 8080
         protocol: TCP
+      - containerPort: 30009
+        hostPort: 3000
+        protocol: TCP
