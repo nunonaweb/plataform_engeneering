@@ -8,7 +8,7 @@ WORKDIR /app
 RUN apk add --no-cache git
 
 # Clona o repositório WAHA
-RUN git clone https://github.com/WAHA-WAHA/WAHA.git . 
+RUN git clone https://github.com/n8n-io/n8n.git . 
 
 # Instala dependências do projeto
 RUN npm install
