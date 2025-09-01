@@ -1,0 +1,16 @@
+#brunoborges.eti.br
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkins-pv-claim
+  namespace: jenkins
+  labels:
+    app: jenkins
+spec:
+  accessModes:
+    #- ReadWriteOnce # Permite que o volume seja montado por um único nó com acesso de leitura e escrita.
+    #- ReadOnlyMany  # Permite que o volume seja montado por múltiplos nós com acesso somente leitura.
+    - ReadWriteMany # Permite que o volume seja montado por múltiplos nós com acesso de leitura e escrita.
+  resources:
+    requests:
+      storage: 8Gi # Tamanho do armazenamento. Ajuste conforme sua necessidade.
