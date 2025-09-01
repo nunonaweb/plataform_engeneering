@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo "1 Construindo Imagem Docker version ${env.BUILD_ID}"
                 script {
-                    dockerapp = docker.build("nunonaweb/plataform_engeneering:${env.BUILD_ID}", '-f Dockerfile' )
+                    dockerapp = docker.build("nunonaweb/plataform_engeneering:${env.BUILD_ID}", '-f Dockerfile .' )
 
                 }
             }
